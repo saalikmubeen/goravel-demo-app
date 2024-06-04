@@ -78,6 +78,6 @@ export PATH=$PATH:$GOPATH/bin
    go run ./*.go
    ```
 
-7. Visit `http://localhost:4000` in your browser.
-
 ![Goravel Demo App](/screenshots/terminal.png)
+
+7. Visit `http://localhost:4000` in your browser.
