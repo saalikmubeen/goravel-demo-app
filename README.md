@@ -55,12 +55,18 @@ This is a demo app for the [Goravel](https://github.com/saalikmubeen/goravel) we
    go install github.com/saalikmubeen/goravel/cmd/goravel@latest
    ```
 
+Make sure you have the `$GOPATH/bin` directory in your `PATH` environment variable. If you don't have it, you can add it to your `~/.bashrc` or `~/.bash_profile` or `~/.zshrc` file:
+
+```bash
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
+```
+
 5. Run the migrations (from the root of the project)
 
    ```bash
     goravel migrate up
   ```
-
 
 6. Start the server:
 
@@ -68,5 +74,4 @@ This is a demo app for the [Goravel](https://github.com/saalikmubeen/goravel) we
    go run ./*.go
    ```
 
-
-7. Visit the app in your browser at `http://localhost:4000`
+7. Visit `http://localhost:4000` in your browser.
