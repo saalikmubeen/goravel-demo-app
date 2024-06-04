@@ -7,7 +7,8 @@ go 1.22.3
 require (
 	github.com/CloudyKit/jet/v6 v6.2.0
 	github.com/go-chi/chi/v5 v5.0.12
-	github.com/saalikmubeen/goravel v1.4.1
+	github.com/justinas/nosurf v1.1.1
+	github.com/saalikmubeen/goravel v1.5.0
 	github.com/upper/db/v4 v4.7.0
 	golang.org/x/crypto v0.21.0
 )
@@ -54,7 +55,6 @@ require (
 	github.com/jackc/pgx/v4 v4.18.3 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
-	github.com/justinas/nosurf v1.1.1 // indirect
 	github.com/klauspost/compress v1.15.11 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/mailgun/mailgun-go/v4 v4.4.1 // indirect
