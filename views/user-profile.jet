@@ -1,0 +1,48 @@
+
+{{extends "./layouts/base.jet"}}
+
+{{block browserTitle()}}
+User Profile
+{{end}}
+
+{{block css()}} {{end}}
+
+{{block pageContent()}}
+<h2 class="mt-5 text-center">Profile</h2>
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center">User Profile</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3> <em> {{ User.Email }} </em>  </h3>
+                        </div>
+                        <div class="col-md-12">
+                            <h5>{{User.FirstName}} {{User.LastName}}</h5>
+                            <p>{{User.Email}}</p>
+                            <p>{{User.CreatedAt.Format("2006-01-02")}}</p>
+
+                           <em class="text-muted">Last updated: {{User.UpdatedAt.Format("2006-01-02")}}</em>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{{end}}
+
+
+{{block js()}}
+
+{{end}}

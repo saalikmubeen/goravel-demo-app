@@ -1,0 +1,57 @@
+package models
+
+import (
+	"database/sql"
+	"fmt"
+
+	"github.com/saalikmubeen/goravel"
+	up "github.com/upper/db/v4"
+	"github.com/upper/db/v4/adapter/mysql"
+	"github.com/upper/db/v4/adapter/postgresql"
+)
+
+var db *sql.DB
+var upper up.Session
+
+// Models is the wrapper for all database models
+// any models inserted here (and in the New function)
+// are easily accessible throughout the entire application
+type Models struct {
+
+	// ** Register your models here.
+	Users            User
+	Tokens           Token
+	RememberMeTokens RememberMeToken
+}
+
+// New initializes the models package for use
+func New(database goravel.Database) *Models {
+	db = database.Pool
+
+	switch database.DatabaseType {
+	case "mysql", "mariadb":
+		upper, _ = mysql.New(database.Pool)
+	case "postgres", "postgresql", "pgx":
+		upper, _ = postgresql.New(database.Pool)
+	default:
+		// do nothing
+	}
+
+	return &Models{
+
+		// ** Register your models here.
+		Users:            User{},
+		Tokens:           Token{},
+		RememberMeTokens: RememberMeToken{},
+	}
+}
+
+// getInsertID returns the integer value of a newly inserted id (using upper)
+func getInsertID(i up.ID) int {
+	idType := fmt.Sprintf("%T", i)
+	if idType == "int64" { // postgres returns int64 for inserted id
+		return int(i.(int64))
+	}
+
+	return i.(int)
+}
