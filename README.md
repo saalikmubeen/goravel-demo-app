@@ -33,7 +33,9 @@ This is a demo app for the [Goravel](https://github.com/saalikmubeen/goravel) we
 1. Clone the repository:
 
    ```bash
-   git clone
+   git clone git@github.com:saalikmubeen/goravel-demo-app.git
+
+    cd goravel-demo-app
     ```
 
 2. Install the dependencies:
