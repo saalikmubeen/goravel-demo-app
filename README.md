@@ -79,3 +79,5 @@ export PATH=$PATH:$GOPATH/bin
    ```
 
 7. Visit `http://localhost:4000` in your browser.
+
+![Goravel Demo App](/screenshots/terminal.png)
