@@ -5,6 +5,10 @@ This is a demo app for the [Goravel](https://github.com/saalikmubeen/goravel) we
 
 
 
+![Goravel Demo App](/screenshots/browser.png)
+
+
+
 ## Features demonstrated in this demo app:
 
 - Routing
